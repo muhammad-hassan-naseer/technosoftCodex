@@ -14,19 +14,19 @@ const ThreeDApp = () => {
         {
           head: "Games",
           para: "Our talented team of game developers transform ideas into fun and engaging games that captivate users. We produce games on mobile, web, and virtual/ augmented reality.",
-          img: <i class="fas fa-gamepad fa-2x text-primary text-center"/>,
+          img: <i class="fas fa-gamepad fa-3x text-primary text-center"/>,
           sign: "",
         },
         {
           head: "Simulations",
           para: "Our 3D Apps team can create any simulation you can dream up – from a legendary video game quest to a training simulation and more.",
-          img: <i class="fab fa-500px fa-2x text-primary text-center"/>,
+          img: <i class="fab fa-500px fa-3x text-primary text-center"/>,
           sign: "",
         },
         {
           head: "Visualizations",
           para: "Our teams build brilliant 3D visualizations with precision and accuracy, enabling you display an abstract idea with clarity.",
-          img: <i class="fas fa-universal-access fa-2x text-primary text-center"/>,
+          img: <i class="fas fa-universal-access fa-3x text-primary text-center"/>,
           sign: "",
         },
       ];
@@ -63,8 +63,9 @@ const ThreeDApp = () => {
         return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
       });
       const postHeader={
-        service:"Services",
-        tagLine:"3D App Development",
+service:"Tech Service",
+
+        tagLine:"Digital Marketing",
         para:"An idea can be a powerful thing. Our engineers convert your idea into stunning 3D apps, enchanting your users with an immersive alternate reality. Share your idea and we will help you unlock its full potential.",
         btn:<button type="button" class="btn btn-primary">Tell us about your project</button>,
         id:"threeD"    
@@ -75,12 +76,12 @@ const ThreeDApp = () => {
             <PostHeader postHeader={postHeader}/>
             <div className="">
                 <div className="container">
-                <h2 className="text-center text-white text-primary mt-5">Let our team transform your ideas into vivid 3D imagery.
+                <h2 className="text-center text-underline">Let our team transform your ideas into vivid 3D imagery.
 
 </h2>
                 <div className="row mt-5">{techArray}</div>
                 <Strategy obj={strategy} />
-                <h2 className="text-center text-white text-primary mt-5">The Technosoft Advantage.</h2>
+                <h2 className="text-center">LeadSolution Advantage.</h2>
 <p className="text-center text-white text-primary">Let our experts amaze your customers with mesmerizing interactive 3D imagery.</p>
 <div className="row">{advantagesArray}</div>
 

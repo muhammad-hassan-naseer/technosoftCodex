@@ -69,10 +69,11 @@ const OpenEdx = () => {
         return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
       });
       const postHeader={
-        service:"Services",
+        service:"Tech Service",
+
         tagLine:"Open edX Services",
         para:"As an edX partner and Open edX service provider and contributor, we offer clients a unique advantage when it comes to custom development, implementation and integration, managed hosting, support and training.",
-        btn:<button type="button" class="btn btn-primary">Tell us about your project</button>,
+        btn:<button type="button" class="btn btn-primary">Let's Discuss Your Project</button>,
         id:"openEdx"    
       }
     return (

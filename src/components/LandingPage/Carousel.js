@@ -1,8 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 const Carousel = () => {
   return (
-    <div>
+    <div className="bg-light text-dark">
+      <h3 className="text-center text-dark pt-3  mt-5">
+        Meet With Our Happy Clients
+      </h3>
+      <p className="font-weight-bold text-dark text-center">
+        See what our client say about us
+      </p>
       <div
         id="carouselExampleIndicators"
         className="carousel slide pointer-event mt-5"
@@ -25,16 +31,19 @@ const Carousel = () => {
             className
           />
         </ol>
-        <div className="carousel-inner">
+        <div className="carousel-inner text-dark">
           <div className="carousel-item active">
             <div className="row">
-              <div className="col-4">
-                <img src="https://www.thefounder.in/wp-content/uploads/2020/09/192x192.jpg" />
+              <div className="col-3">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
+                  className="carouselImg"
+                />
               </div>
-              <div className="col-8 d-flex align-items-center">
+              <div className="col-9">
+                <h2 className="text-dark-orange font-weight-bold">Mr Hassan</h2>
                 <p>
-                  Beyond our skilled expertise, it is our customers and our
-                  relationship with them that sets us apart
+                 It was one the best decison of my life to choose Lead Solutions
                 </p>
               </div>
             </div>
@@ -42,12 +51,15 @@ const Carousel = () => {
           <div className="carousel-item">
             <div className="row">
               <div className="col-4">
-                <img src="https://www.thefounder.in/wp-content/uploads/2020/09/192x192.jpg" />
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
+                  className="carouselImg"
+                />
               </div>
-              <div className="col-8 d-flex align-items-center">
+              <div className="col-8">
+                <h2 className="text-dark-orange font-weight-bold">Mr.Hamza</h2>
                 <p>
-                  Beyond our skilled expertise, it is our customers and our
-                  relationship with them that sets us apart
+                 My restaurant website was extremelly professional and fancy.
                 </p>
               </div>
             </div>
@@ -55,12 +67,15 @@ const Carousel = () => {
           <div className="carousel-item">
             <div className="row">
               <div className="col-4">
-                <img src="https://www.thefounder.in/wp-content/uploads/2020/09/192x192.jpg" />
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
+                  className="carouselImg"
+                />
               </div>
-              <div className="col-8 d-flex align-items-center">
-                <p className="d-flex align-item-center">
-                  Beyond our skilled expertise, it is our customers and our
-                  relationship with them that sets us apart
+              <div className="col-8">
+                <h2 className="text-dark-orange font-weight-bold">Mr.Bilal</h2>
+                <p>
+                  Extremely professionl team and time oriented.
                 </p>
               </div>
             </div>
@@ -89,7 +104,7 @@ const Carousel = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel

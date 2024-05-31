@@ -63,10 +63,9 @@ const WebAppDevelopment = () => {
         return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
       });
       const postHeader={
-        service:"Services",
         tagLine:"Dedicated Software Development Team",
         para:"Looking for the best resources to compliment your existing team? Our talented developers are available to augment your team on a short or long term basis.",
-        btn:<button type="button" class="btn btn-primary">Tell us about your project</button>,
+        btn:<button type="button" class="btn btn-primary">Let's Discuss Your Project</button>,
         id:"teamExt"    
       }
     return (

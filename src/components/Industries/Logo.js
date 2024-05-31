@@ -2,6 +2,7 @@ import React from "react";
 
 const Logo = () => {
   return (
+    <div className="bg-light">
     <div className="container">
       <div className="row mt-5">
         <div className="col-sm pt-2">
@@ -46,7 +47,7 @@ const Logo = () => {
         </div>
         
       </div>
-    </div>
+    </div></div>
   );
 };
 

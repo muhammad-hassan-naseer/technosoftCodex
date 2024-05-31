@@ -21,13 +21,18 @@ import Finance from './components/Industries/Finance';
 import Technology from './components/Industries/Technology';
 import ECommerce from './components/Industries/E-Commerce';
 import FreshGradHiring from './components/Careers/FreshGradHiring';
-
-
+import Contact from './components/Contact/Contact';
+import jobDetail from './components/Careers/jobDetail';
+import JobApp from './components/Careers/JobApp';
+import ReactNative from './components/MobileAppDevelopment/ReactNative';
+import BlockChain from './components/BlockChain/BlockChain';
+import Ecommerce from './components/Ecommerce/Ecommerce';
+import SEO from './components/SEO/SEO'
 function App() {
   return (
     <div >
-        <BrowserRouter basename="/technosoftcodex">
-   <Route exact path='/technosoftcodex/' component={Landing}/>
+        <BrowserRouter>
+   <Route exact path='/' component={Landing}/>
    <Route exact path='/whytech' component={WhyTechnosoft}/>
    <Route exact path='/web-app-development' component={WebAppDevelopment}/>
    <Route exact path='/mobile-app-development' component={MobileAppDevelopment}/>
@@ -48,6 +53,15 @@ function App() {
    <Route exact path='/industry-technology' component={Technology}/>
    <Route exact path='/industry-e-commerce' component={ECommerce}/>
    <Route exact path='/fresh-grad-hiring' component={FreshGradHiring}/>
+   <Route exact path='/contact' component={Contact}/>
+   <Route exact path='/job-description-detail/:id' component={jobDetail}/>
+   <Route exact path='/job-application' component={JobApp}/>
+   <Route exact path='/react-native-app-development' component={ReactNative}/>
+   <Route exact path='/ecommerce-dev-service' component={Ecommerce}/>
+   <Route exact path='/block-chain-dev-service' component={BlockChain}/>
+   <Route exact path='/search-engine-optimization-service' component={SEO}/>
+
+
 
    </BrowserRouter>
     </div>

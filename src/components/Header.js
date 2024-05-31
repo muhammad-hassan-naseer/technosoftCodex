@@ -1,44 +1,94 @@
-import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div>
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">Technosoft</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light mb-5 ml-auto">
+        <Link className="navbar-brand ml-5" to="/">
+          <h3>
+            Lead Solution
+            <br />
+            <h4 className="text-center text-dark">Coding Center</h4>
+          </h3>
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto margin-right">
             <li className="nav-item active">
-              <Link className="nav-link" to="whytech">Why Technosoft <span className="sr-only">(current)</span></Link>
+              <Link className="nav-link px-3 px-md-2 font" to="whytech">
+                Why LeadSoluton<span className="sr-only">(current)</span>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Services
+              <Link
+                className="nav-link px-3 px-md-2 dropdown-toggle font text-dark"
+                to="#"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
               </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link className="dropdown-item" to="web-app-development">Web App Development</Link>
-                <Link className="dropdown-item" to="mobile-app-development">Mobile App Development</Link>
-                <Link className="dropdown-item" to="devops-service">DevOps</Link>
-                <Link className="dropdown-item" to="dedicated-software-development-team">Team Extension</Link>
-                <Link className="dropdown-item" to="ui-ux-design">UI/UX</Link>
-                <Link className="dropdown-item" to="quality-assurance">Quality Assurance</Link>
-                <Link className="dropdown-item" to="3d-app-development">3D</Link>
-                <Link className="dropdown-item" to="enterprise-software-dev">Enterprise Software Development</Link>
-                <Link className="dropdown-item" to="open-edx">Open edx</Link>
-                <Link className="dropdown-item" to="web-scraping">Web Scraping</Link>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <Link className="dropdown-item" to="/block-chain-dev-service">
+                  BlockChain Development
+                </Link>
+                <Link className="dropdown-item" to="/ecommerce-dev-service">
+                  Ecommerce Web Development
+                </Link>
+                <Link
+                  className="dropdown-item"
+                  to="/search-engine-optimization-service"
+                >
+                  Search Engine Optimization
+                </Link>
+
+                <Link
+                  className="dropdown-item"
+                  to="react-native-app-development"
+                >
+                  React Native App Development
+                </Link>
+                <Link className="dropdown-item" to="ui-ux-design">
+                  UI/UX
+                </Link>
+                <Link className="dropdown-item" to="quality-assurance">
+                  Quality Assurance
+                </Link>
+                <Link className="dropdown-item" to="web-app-development">
+                  Web App Development
+                </Link>
+                <Link className="dropdown-item" to="mobile-app-development">
+                  Mobile App Development
+                </Link>
               </div>
             </li>
+
             <li className="nav-item active">
-              <Link className="nav-link" to="clients">Clients <span className="sr-only">(current)</span></Link>
+              <Link className="nav-link px-3 px-md-2 font" to="/contact">
+                Contact Us <span className="sr-only">(current)</span>
+              </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {/* <li className="nav-item dropdown">
+              <Link className="nav-link px-3 px-md-2 dropdown-toggle font text-dark" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Industries
               </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
                 <Link className="dropdown-item" to="industry-education">Education</Link>
                 <Link className="dropdown-item" to="industry-travel">Travel</Link>
                 <Link className="dropdown-item" to="industry-healthcare">Healthcare</Link>
@@ -46,23 +96,32 @@ const Header = () => {
                 <Link className="dropdown-item" to="industry-technology">Technology</Link>
                 <Link className="dropdown-item" to="industry-e-commerce">E-Commerce</Link>
               </div>
-            </li>
+            </li> */}
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Careers
+              <Link
+                className="nav-link px-3 px-md-2 dropdown-toggle font text-dark dropstart"
+                to="#"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Careers
               </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link className="dropdown-item" to="/careers">Open Positions</Link>
-                <Link className="dropdown-item" to="/fresh-grad-hiring">Fresh Graduat Hiring</Link>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <Link className="dropdown-item" to="/careers">
+                  Open Positions
+                </Link>
               </div>
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-primary">Request A Quote</button>
-
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

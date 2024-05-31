@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import FeatureBoxCol from "./FeatureBoxCol";
+import React, { Component } from 'react'
+import FeatureBoxCol from './FeatureBoxCol'
 
 const FeatureBox = (props) => {
   return (
@@ -8,7 +8,7 @@ const FeatureBox = (props) => {
         <FeatureBoxCol img={props.image} val={props.val} tag={props.tag} />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FeatureBox;
+export default FeatureBox

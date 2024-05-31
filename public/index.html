@@ -9,12 +9,28 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -36,11 +52,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <!--
+split slider
+    -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <noscript>
+      <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+    </noscript>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css"
+      integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg=="
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"
+      integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g=="
+      crossorigin="anonymous"
+    ></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -50,22 +96,659 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Software Company</title>
   </head>
   <body>
-    <style>
-      @media (max-width: 992px) {
-        .margin {
-          margin-left: 180px;
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <style type="text/css">
+      .ferris_wheel,
+      .wheel {
+        border: 6px solid #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      #background-img {
+        background-image: url('https://www.nobroker.in/blog/wp-content/uploads/2021/04/cyient.jpg');
+        background-size: 100%;
+        height: 540px;
+      }
+      .row-height {
+        height: 300px;
+      }
+      #sec-one:hover {
+        background-image: url('https://www.strategyand.pwc.com/m1/en/strategic-foresight/sector-strategies/public-sector/teaser-public-sector.jpg') !important;
+        background-size: cover;
+      }
+      .img-dapp-size {
+        width: 147px;
+      }
+      .img-fWeb-size {
+        width: 261px;
+      }
+      .img-nft-size {
+        width: 281px;
+      }
+      #sec-two:hover {
+        background-image: url('https://cloudinary.hbs.edu/hbsit/image/upload/s--wx5D2ABw--/f_auto,c_fill,h_375,w_750,/v20200101/5393409F6FB391494111C5EC16653C89.jpg') !important;
+        background-size: cover;
+      }
+      #sec-three:hover {
+        background-image: url('https://static.businessworld.in/article/article_extra_large_image/1503570496_8Cq7vu_telecom-shutterstock_470.jpg') !important;
+        background-size: cover;
+      }
+      #sec-four:hover {
+        background-image: url('https://images.financialexpress.com/2019/06/cats-206.jpg') !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .sector-padding {
+        padding-left: 210px;
+        padding-right: 210px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+      .sector-padding-two {
+        padding-left: 210px;
+        padding-right: 210px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+      .sector-padding-three {
+        padding-left: 244px;
+        padding-right: 150px;
+        padding-top: 118px;
+
+        padding-bottom: 44px;
+      }
+      .width-set {
+        width: 58% !important;
+      }
+      .sector-padding-four {
+        padding-left: 224px;
+        padding-right: 147px;
+        padding-top: 118px;
+        padding-bottom: 46px;
+      }
+
+      .discuss-btn:hover {
+        color: white;
+        background: #df5a21 !important;
+        border: 1px solid #df5a21;
+      }
+      .bg-orange-type {
+        background: #df5a21 !important;
+      }
+      .background-img {
+        background-image: url('');
+      }
+      .ferris_wheel {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(1.4, 1.4);
+        border: 0;
+      }
+      .wheel-margin {
+        margin-bottom: 116px;
+      }
+      .wheel_wrap {
+        position: absolute;
+        animation: wheel_rotate 40s infinite linear;
+      }
+      h4 {
+        color: #df5a21 !important;
+        font-size: 22px;
+      }
+      .text-dark-orange {
+        color: #df5a21 !important;
+      }
+      p {
+        font-size: 15px !important;
+      }
+      .wheel:before {
+        content: '';
+        height: 50px;
+        width: 50px;
+        background: #888;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        z-index: 1;
+      }
+
+      .wheel:after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        background: #683c10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -12px;
+        margin-left: -12px;
+        border-radius: 50%;
+        border: 4px solid #f3ae34;
+        z-index: 1;
+      }
+
+      .wheel span:nth-child(1):before {
+        content: '';
+        border-bottom: 2px solid #babcba;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        top: 50%;
+        left: 6px;
+      }
+
+      .wheel span:nth-child(1):after {
+        content: '';
+        border-right: 2px solid #babcba;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 150px;
+        top: 6px;
+        left: 50%;
+        transform: rotate(45deg);
+      }
+
+      .wheel span:nth-child(2):before {
+        content: '';
+        border-right: 2px solid #babcba;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 150px;
+        top: 5px;
+        left: 50%;
+        transform: rotate(-45deg);
+      }
+      .img-management-size {
+        width: 90%;
+      }
+      .img-bpo-size {
+        width: 232px;
+      }
+      .bg-img-vision {
+        background-image: url('https://www.prismetric.com/wp-content/uploads/2021/04/our_vision.png?tr=w-580,h-325');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .wheel span:nth-child(2):after {
+        content: '';
+        border-right: 2px solid #babcba;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 150px;
+        top: 6px;
+        left: 50%;
+      }
+
+      div.stand:before,
+      div.stand:after {
+        content: '';
+        position: absolute;
+        border-right: 4px solid #f3ae34;
+        height: 120px;
+        transform: rotate(15deg);
+        top: 88px;
+        left: 50%;
+        margin-left: -15px;
+      }
+
+      div.stand:after {
+        transform: rotate(-15deg);
+        margin-left: 23px;
+      }
+
+      .stand span {
+        position: absolute;
+        height: 10px;
+        background: #683c10;
+        width: 100px;
+        bottom: -60px;
+        left: 50%;
+        margin-left: -44px;
+        z-index: 1;
+      }
+
+      @keyframes wheel_rotate {
+        0% {
+          transform: rotate(0);
         }
-        #build {
-          font-size: 14px;
-        }
-        .overlay {
-          top: 96px !important;
-          left: 4px !important;
+        100% {
+          transform: rotate(360deg);
         }
       }
+
+      .buckets {
+        position: absolute;
+        border: 6px solid #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .buckets div {
+        position: absolute;
+        animation: bucket_rotate 40s infinite linear;
+        top: 50%;
+        left: 50%;
+        margin-top: 11px;
+        margin-left: -13px;
+      }
+
+      .buckets div:before {
+        content: '';
+        height: 13px;
+        left: 9px;
+        border-right: 1px solid #888;
+        position: absolute;
+        top: -12px;
+        transform: rotate(30deg);
+      }
+
+      .buckets span {
+        display: inline-block;
+        border-top: 15px solid black;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        height: 0;
+        width: 20px;
+        position: relative;
+      }
+
+      .buckets span:before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        height: 3px;
+        width: 21px;
+        left: -2px;
+        background: #652382;
+      }
+
+      .buckets span:after {
+        content: '';
+        height: 3px;
+        left: -6px;
+        background: linear-gradient(
+          to right,
+          #97cde6 0%,
+          #97cde6 35%,
+          #fff 35%,
+          #fff 66%,
+          #97cde6 66%,
+          #97cde6 100%
+        );
+        width: 25px;
+        position: absolute;
+        top: -12px;
+      }
+
+      @keyframes bucket_rotate {
+        0% {
+          transform: rotate(0) translateX(75px) rotate(0);
+        }
+        100% {
+          transform: rotate(360deg) translateX(75px) rotate(-360deg);
+        }
+      }
+
+      .buckets div:nth-child(2) {
+        animation-delay: -4.8s;
+      }
+
+      .buckets div:nth-child(3) {
+        animation-delay: -9.9s;
+      }
+
+      .buckets div:nth-child(4) {
+        animation-delay: -15s;
+      }
+
+      .buckets div:nth-child(5) {
+        animation-delay: -20s;
+      }
+
+      .buckets div:nth-child(6) {
+        animation-delay: -25s;
+      }
+
+      .buckets div:nth-child(7) {
+        animation-delay: -30s;
+      }
+
+      .buckets div:nth-child(8) {
+        animation-delay: -35s;
+      }
+
+      /* scroll to th top button */
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: lightblue;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: #555;
+      }
+      /* google text */
+      p {
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .nav-link,
+      .dropdown-item,
+      .footer-text {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: var(--primary);
+      }
+      h4 {
+        color: ;
+      }
+      .rights {
+        font-size: 14px;
+        color: black;
+      }
+
+      /* .footer:before {
+        content: '';
+        display: block;
+        position: static;
+               width: 2696px;
+
+        top: 3500px;
+        height: 30px;
+        bottom: -110px;
+        left: 31px;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+          background: #7a73ff;
+
+        opacity: 0.5;
+        z-index: 1;
+      }  
+       */
+      /* .footer-s:after {
+        content: '';
+        display: block;
+        position: static;
+        width: 2696px
+;
+        top: 3518px;
+        height: 30px;
+        bottom: -110px;
+        left: 31px;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+        background: #7a73ff;
+        opacity: 0.5;
+        z-index: 1;
+      }
+  */
+      /* another */
+
+      h2 {
+        margin-top: 20px;
+        color: var(--primary);
+      }
+      .text-underline {
+        text-decoration: underline;
+      }
+      h2,
+      h4 {
+        font-weight: bold;
+      }
+
+      h4 {
+        color: var(--primary);
+        margin-top: 10px;
+      }
+      i {
+        text-align: left !important;
+      }
+      .block-feature {
+        box-shadow: 0 0.5rem 2rem rgba(48, 122, 155, 0.1) !important;
+      }
+
+      /* Header Component style */
+      .font {
+        font-size: 20px;
+      }
+      .navbar.active {
+        background: #fff !important;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .postHead-margin {
+        margin-top: 102px !important;
+      }
+      .nav-item .nav-link:hover {
+        background-color: black !important;
+        color: white !important;
+        border-radius: 1px solid black;
+        border-radius: 10px;
+      }
+
+      .margin-right {
+        margin-right: 80px;
+      }
+      .laptop {
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.6) translate(-50%);
+        transform: scale(0.6) translate(-50%);
+        /* left: 50%; */
+        width: 1366px;
+        position: relative;
+        left: 50%;
+        height: 800px;
+        border-radius: 6px;
+        border-style: solid;
+        border-color: black;
+        border-width: 24px 24px 80px;
+        background-color: black;
+        z-index: 1;
+      }
+      .summary-size {
+        font-size: 14px;
+      }
+      .laptopMargin {
+        margin-top: 625px;
+      }
+      /*job app*/
+      .job-head {
+        width: 84px;
+      }
+
+      /* The keyboard of the laptop */
+      .laptop:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1600px;
+        height: 20px;
+        margin: 8px 0 0 -110px;
+        background: black;
+        border-radius: 6px;
+      }
+      /*carousel viework */
+
+      .height {
+        height: 532px;
+      }
+
+      /* The top of the keyboard */
+      .laptop:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 250px;
+        height: 30px;
+        bottom: -110px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+        background: #f1f1f1;
+        z-index: 1;
+      }
+
+      /* The screen (or content) of the device */
+      .laptop .content {
+        width: 1366px;
+        height: 800px;
+        overflow: hidden;
+        border: none;
+      }
+      .smartphone {
+        position: relative;
+        width: 357px;
+        height: 556px;
+        margin: auto;
+        border: 16px black solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 36px;
+      }
+
+      /* The horizontal line on the top of the device */
+      .smartphone:before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 10px;
+      }
+
+      /* The circle on the bottom of the device */
+      .smartphone:after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 50%;
+      }
+
+      /* The screen (or content) of the device */
+      .smartphone .content {
+        width: 322px;
+        height: 418px;
+        background: white;
+      }
+      .Threed {
+        margin: 0 auto;
+        width: 250px;
+        height: 538px;
+        position: relative;
+        perspective: 1000px;
+      }
+
+      .carouselThreed {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+      }
+
+      .item {
+        display: block;
+        position: absolute;
+        background: #000;
+        width: 280px;
+        height: 300px;
+        line-height: 538px;
+        font-size: 5em;
+        text-align: center;
+        color: #fff;
+        opacity: 0.95;
+        border-radius: 10px;
+      }
+
+      .a {
+        transform: rotateY(0deg) translateZ(250px);
+        background: #ed1c24;
+      }
+      .b {
+        transform: rotateY(60deg) translateZ(250px);
+        background: #0072bc;
+      }
+      .c {
+        transform: rotateY(120deg) translateZ(250px);
+        background: #39b54a;
+      }
+      .d {
+        transform: rotateY(180deg) translateZ(250px);
+        background: #f26522;
+      }
+      .e {
+        transform: rotateY(240deg) translateZ(250px);
+        background: #630460;
+      }
+      .f {
+        transform: rotateY(300deg) translateZ(250px);
+        background: #8c6239;
+      }
+
+      .forward,
+      .back {
+        color: var(--white);
+        position: absolute;
+        top: 100px;
+        padding: 1em 2em;
+        cursor: pointer;
+        background: var(--primary);
+        border-radius: 5px;
+        border-top: 1px solid #fff;
+        box-shadow: 0 5px 0 #999;
+        transition: box-shadow 0.1s, top 0.1s;
+      }
+      .forward:hover,
+      .back:hover {
+        color: #000;
+      }
+      .forward:active,
+      .back:active {
+        top: 104px;
+        box-shadow: 0 1px 0 #999;
+      }
+      .back {
+        left: 120px;
+      }
+
       .overlay {
         z-index: 5;
         position: absolute;
@@ -77,26 +760,58 @@
 
       /**HeaderBackground Style**/
       .bgImg {
-        background-image: url("https://www.bovada.com/wp-content/uploads/2021/03/nfl-2.jpg");
+        background-image: url('https://www.bovada.com/wp-content/uploads/2021/03/nfl-2.jpg');
         width: 100%;
         height: 100%;
         object-fit: cover;
         opacity: 0.4;
       }
       .transparent-dark {
-        background: rgba(0, 0, 0, 0.5);
-
+        background: rgba(0, 0, 0, 0.7);
         height: 100%;
       }
-      .study1 {
-        background-image: url("https://cdn.techjuice.pk/wp-content/uploads/2017/03/windows-10-laptop-1280x720.jpg");
-        height: 655px;
+      .ttransparent-dark {
+        background: rgba(0, 0, 0, 0.4);
         width: 100%;
+        border-radius: 6px;
+      }
+      .d-hidden {
+        display: none !important;
+      }
+      .tttransparent-dark {
+        background: rgba(223, 90, 33, 0.6);
+        width: 100%;
+        height: 540px;
+      }
+
+      .transparent-dark-two {
+        background: rgba(0, 0, 0, 0.6);
+        height: 100%;
+      }
+      .main {
+        background-image: url('https://assets.rbl.ms/25591710/origin.jpg');
+        height: 657px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         z-index: 1;
       }
+      .right::before {
+        content: ' ';
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid black;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent black transparent transparent;
+      }
+
       .study1:after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         right: 0;
@@ -106,6 +821,19 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+      .sstudy1:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-radius: 6px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
         z-index: -1;
       }
       .type {
@@ -127,9 +855,9 @@
       }
 
       .fixPic {
-        width: 70%;
-        height: 221px;
-        border-radius: 143px;
+        width: 83%;
+        margin-top: 41px;
+        height: 193px;
       }
       .dot {
         height: 180px;
@@ -139,119 +867,124 @@
         border-radius: 50%;
         display: inline-block;
       }
+      /* UI */
+      .text-color {
+        color: #307a9b !important;
+      }
+      .ui-img-thi {
+        width: 105px;
+      }
+      .rotate {
+        animation: mymove 5s infinite;
+      }
+      .rotate {
+        border: 1px solid lightgray;
+        box-shadow: 0 0.5rem 2rem rgba(48, 122, 155, 0.1) !important;
+      }
+      @keyframes mymove {
+        50% {
+          transform: rotate(1deg);
+        }
+      }
+      .on-hover:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+        transition: all 300ms ease-in-out;
+      }
+      .ui-img {
+        width: 100px;
+      }
+      .ui-img-t {
+        width: 263px;
+      }
+      .ui-img-th {
+        width: 91px;
+      }
+      .ui-img-thi {
+        width: 132px;
+      }
+      /* UI */
+      /* Ferris Wheel */
+      .step {
+        color: #307a9b;
+      }
+      .solution-box-img-thi {
+        width: 87%;
+      }
+      .step-box {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        border-radius: 50%;
+        display: grid;
+        align-items: center;
+        border: 1px solid #307a9b;
+        background-color: #307a9b;
+        font-size: 22px;
+        color: white;
+        margin-left: 100px;
+      }
+      /* Quality Assurance */
+      .block-shadow:hover {
+        box-shadow: 0 0.5rem 2rem rgba(48, 122, 155, 0.1) !important;
+      }
 
-      .background {
-        background-image: url("");
-        height: 655px;
-        width: 100%;
-        background-color: black;
-        position: relative;
-        z-index: 1;
+      .card-height {
+        height: 335px;
       }
-      .card {
-        border: none;
+      /*React Natie */
+      .react-mobile-img {
+        width: 58%;
       }
-      .footerImg {
-        width: 100%;
-        height: 100%;
+      .box-hover-two {
+        color: #000;
       }
-      /* Careers Page styling of card */
-      .card {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 360px;
-        height: 400px;
+
+      .box-hover:hover {
+        background-color: #307a9b;
+        color: white !important;
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15) !important;
       }
-      .card .image {
-        background: white;
-        padding: 21px;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      .card .image img {
-        width: 100%;
-        transition: 0.5s;
-      }
-      .card:hover .image img {
-        opacity: 0.5;
-        transform: translateX(30%); /*100%*/
-      }
-      .card .details {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 70%; /*100%*/
-        height: 100%;
-        transition: 0.5s;
-        transform-origin: left;
-        transform: perspective(2000px) rotateY(-90deg);
-      }
-      .card:hover .details {
-        transform: perspective(2000px) rotateY(0deg);
-      }
-      .card .details .center {
-        padding: 20px;
-        text-align: center;
-        background: #fff;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .card .details .center h1 {
-        margin: 0;
-        padding: 0;
-        color: #ff3636;
-        line-height: 20px;
-        font-size: 20px;
-        text-transform: uppercase;
-      }
-      .card .details .center h1 span {
-        font-size: 14px;
-        color: #262626;
-      }
-      .card .details .center p {
-        margin: 10px 0;
-        padding: 0;
-        color: #262626;
-      }
-      .card .details .center ul {
-        margin: 10px auto 0;
-        padding: 0;
-        display: table;
-      }
-      .card .details .center ul li {
-        list-style: none;
-        margin: 0 5px;
-        float: left;
-      }
-      .card .details .center ul li a {
-        display: block;
-        background: #262626;
-        color: #fff;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        transform: 0.5s;
-      }
-      .card .details .center ul li a:hover {
-        background: #ff3636;
+      .box-hover:hover .awesome-hover {
+        color: #fff !important;
       }
       .job-opening {
-        background-color: #307a9b !important;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 200% 200%;
+        animation: gradient 15s ease infinite;
+        height: 100%;
+        /* box-shadow: inset 5px 5px 10px white, inset -5px -5px 5px white; */
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
       /* Clients Card*/
+      .fun-img {
+        width: 70%;
+      }
       .pic {
         width: 80px;
+      }
+      .custom-img {
+        width: 57%;
       }
       .clientCard:hover {
         background-color: #307a9b;
         color: white;
-        transition: 2s;
       }
-      .clientCard a:hover {
+      .clientCard {
+        background-color: white;
+      }
+      .clientCard:hover h4 {
         color: white !important;
       }
       .dropdown:hover > .dropdown-menu {
@@ -263,147 +996,707 @@
         border: 13px solid black;
         border-bottom: 8px solid palegoldenrod;
       }
-      .fa-trade-federation,
-      .fa-magic,
-      .fa-tasks,
-      .fa-blog,
-      .fa-trophy,
-      .fa-uncharted,
-      .fa-apple-pay,
-      .fa-android,
-      .fa-buromobelexperte,
-      .fa-servicestack,
-      .fa-mountain,
-      .fa-audio-description,
-      .fa-app-store,
-      .fa-researchgate,
-      .fa-accessible-icon,
-      .fa-apple-pay,
-      .fa-gamepad,
-      .fa-laptop,
-      .fa-mobile,
-      .fa-500px,
-      .fa-creative-commons-sampling,
-      .fa-uncharted,
-      .fa-copyright,
-      .fa-ioxhost,
-      .fa-universal-access,
-      .fa-solar-panel,
-      .fa-airbnb,
-      .fa-aws,
-      .fa-database,
-      .fa-ruler-vertical,
-      .fa-yandex-international,
-      .fa-equals,
-      .fa-smog {
-        border: 1px solid #02c3dc;
-        padding: 10px;
-      }
-      .fa-trade-federation:hover,
-      .fa-magic:hover,
-      .fa-aws:hover,
-      .fa-database:hover,
-      .fa-solar-panel:hover,
-      .fa-equals:hover,
-      .fa-ioxhost:hover,
-      .fa-mobile:hover,
-      .fa-airbnb:hover,
-      .fa-yandex-international:hover,
-      .fa-copyright:hover,
-      .fa-uncharted:hover,
-      .fa-creative-commons-sampling:hover,
-      .fa-tasks:hover,
-      .fa-universal-access:hover,
-      .fa-apple-pay:hover,
-      .fa-500px:hover,
-      .fa-gamepad:hover,
-      .fa-app-store:hover,
-      .fa-ruler-vertical:hover,
-      .fa-audio-description:hover,
-      .fa-researchgate:hover,
-      .fa-laptop:hover,
-      .fa-graduation-cap,
-      .fa-tv,
-      .fa-business-time,
-      .fa-sms,
-      .fa-handshake,
+      /* block chain dev */
 
-      .fa-accessible-icon:hover,
-      .fa-servicestack:hover,
-      .fa-smog:hover,
-      .fa-buromobelexperte:hover,
-      .fa-blog:hover,
-      .fa-trophy:hover,
-      .fa-uncharted:hover,
-      .fa-mountain:hover,
-      .fa-apple-pay:hover,
-      .fa-android:hover {
-        background-color: #307a9b;
+      .block-img {
+        width: 64%;
+        border-radius: 10px;
+      }
+      .solution-box-height {
+        height: 289px;
+      }
+      .solution-box-img {
+        width: 50%;
+      }
+
+      .solution-box-img-t {
+        width: 54%;
+      }
+      .solution-box-img-th {
+        width: 33%;
+      }
+
+      /* block chain dev */
+
+      .tech-block:hover {
+        background: #df5a21;
+      }
+      .bg-color {
+        background: gray;
+      }
+      .bg-linear {
+        background: linear-gradient(45deg, #df5a21, transparent);
+      }
+      .btn-orange-type {
+        background: #df5a21;
+      }
+      .tech-block:hover .para {
         color: white !important;
       }
+      .tech-block:hover .btn-orange-type {
+        background-color: white !important;
+        color: black !important;
+      }
+      .tech-block:hover .heading {
+        color: white !important;
+      }
+
+      .tech-block:hover .text-orange {
+        color: white !important;
+      }
+      .block-hover:hover i {
+        color: white !important;
+      }
+      .block-hover:hover {
+        background-color: #307a9b;
+        color: white;
+      }
+      .block-hover:hover h4 {
+        color: white;
+      }
+      .block-hover:hover a {
+        color: white;
+      }
       .indus {
-        background-image: url("https://www.technofunc.com/media/zoo/images/education_industry10_31b69b264fcf84ea91a22a5a0e5fcd97.jpg");
+        background-image: url('https://www.technofunc.com/media/zoo/images/education_industry10_31b69b264fcf84ea91a22a5a0e5fcd97.jpg');
 
         width: 100%;
         height: 600px;
         background-position: center;
+      }
+      .caroImg {
+        width: 235px;
       }
       .logoImg {
         width: 75px;
       }
 
       .study1 {
-        height: 655px;
+        height: 550px;
         width: 100%;
         position: relative;
         z-index: 1;
       }
-      #webApp{
-        background-image: url("https://clockwise.software/img/blog/how-much-does-it-cost-to-build-a-web-application/header-background.jpg");
-
+      .sstudy1 {
+        width: 100%;
+        position: relative;
+        z-index: 1;
       }
-      #mobileApp{
-        background-image: url("https://www.webxzone.com/wp-content/uploads/2021/03/1_o85c5I6T07x3ZZCAWPgDfg.jpeg");
 
+      #webApp {
+        background-image: url('https://lform.com/cms/resources/media/2021/01/custom-web-development-app-1184x694.jpg');
       }
-      #devOps{
-        background-image: url("https://www.einfochips.com/blog/wp-content/uploads/2017/02/DevOps-FAQ.jpg");
-
+      #mobileApp {
+        background-image: url('https://inventionland.com/wp-content/uploads/2018/12/inventionland-flying-apps.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
       }
-      #teamExt{
-        background-image: url("https://www.mapconsulting.com/wp-content/uploads/2021/03/map-consulting-blog-213.jpg");
-
+      #mobileAppReact {
+        background-image: url('https://www.blog-planet.com/wp-content/uploads/2019/07/all-about-react-native-apps-.png');
+        background-repeat: no-repeat;
+        background-size: cover;
       }
-      #Ui{
-        background-image: url("https://www.mindinventory.com/blog/wp-content/uploads/2021/03/Different-Between-UI-UX.png");
-
+      #devOps {
+        background-image: url('https://www.einfochips.com/blog/wp-content/uploads/2017/02/DevOps-FAQ.jpg');
       }
-      #qualityAssurance{
-        background-image: url("https://www.360logica.com/blog/wp-content/uploads/2019/09/3-Benefits-of-Outsourcing-the-QA-and-Testing-of-Your-New-Programming-Software.jpg");
-
+      .custom-img-1 {
+        width: 66%;
       }
-      #threeD{
-        background-image: url("https://miro.medium.com/max/1200/1*wV8t5zwwqz97i1pTFbMUCw.jpeg");
-
+      .custom-img-2 {
+        width: 76%;
       }
-      #softwareDev{
-        background-image: url("https://blog.hyperiondev.com/wp-content/uploads/2017/09/blog.jpg");
-
+      #teamExt {
+        background-image: url('https://www.mapconsulting.com/wp-content/uploads/2021/03/map-consulting-blog-213.jpg');
       }
-      #openEdx{
-        background-image: url("https://cdn-blog.lawrencemcdaniel.com/wp-content/uploads/2018/01/22125436/edx-logo.png");
-
+      #Ui {
+        background-image: url('https://www.mindinventory.com/blog/wp-content/uploads/2020/01/uiux-trends1200.png');
+        background-size: cover;
       }
-      #webScraping{
-        background-image: url("https://soshace.com/wp-content/uploads/2019/09/responsible-web-scraping-gathering-data-ethically-facebook-cover-image.jpg");
+      #seo {
+        background-image: url('https://www.seoclerk.com/pics/522196-2etILS1490590476.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #ecommerce {
+        background-image: url('https://www.smarthint.co/wp-content/uploads/2019/03/futuro-do-ecommerce.jpg');
+        background-size: cover;
+      }
+      #qualityAssurance {
+        background-image: url('https://blog.qasource.com/hubfs/tips-for-effective-qa-reporting.jpg');
+        background-size: cover;
+      }
+      #threeD {
+        background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20190820185239-GettyImages-985550942.jpeg?auto=webp&quality=95&crop=16:9&width=675');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #blockchain {
+        background-image: url('https://store.hp.com/app/assets/images/uploads/prod/how-does-blockchain-work-hero1567110978694840.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
+      #edu {
+        background-image: url('https://www.economy.pk/wp-content/uploads/2020/07/edu.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      #business {
+        background-image: url('https://efektasgroup.com/wp-content/uploads/2020/07/1512148994695-1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      #webApp {
+        background-image: url('https://www.halcyontek.com/images/custom-app-development.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      #tra {
+        background-image: url('https://thethaiger.com/wp-content/uploads/2020/09/airport-travel-1000x600.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      #contact-us-head {
+        background-image: url('https://img.freepik.com/free-photo/contact-us-customer-support-hotline-people-connect-call-customer-support_36325-2023.jpg?size=626&ext=jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .contact-us-head {
+        height: 650px;
+      }
+      #why-tech-pic {
+        background-image: url('https://st2.depositphotos.com/7865540/10803/i/950/depositphotos_108037438-stock-photo-business-workplace-with-concept.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50%;
+      }
+      #heal {
+        background-image: url('https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/sanidad14/PublishingImages/Recursos/030920-salud-digital.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      #finan {
+        background-image: url('https://cloudinary.hbs.edu/hbsit/image/upload/s--wx5D2ABw--/f_auto,c_fill,h_375,w_750,/v20200101/5393409F6FB391494111C5EC16653C89.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      #softwareDev {
+        background-image: url('https://blog.hyperiondev.com/wp-content/uploads/2017/09/blog.jpg');
+      }
+      .on-hover:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+        transition: all 300ms ease-in-out;
+      }
+      #openEdx {
+        background-image: url('https://cdn-blog.lawrencemcdaniel.com/wp-content/uploads/2018/01/22125436/edx-logo.png');
+      }
+      #webScraping {
+        background-image: url('https://soshace.com/wp-content/uploads/2019/09/responsible-web-scraping-gathering-data-ethically-facebook-cover-image.jpg');
       }
       .transparent-dark {
         background: rgba(0, 0, 0, 0.5);
-
         height: 100%;
       }
+      .fun-img-1 {
+        width: 63%;
+      }
+      .fitImg {
+        width: 447px;
+        height: 307px;
+      }
+      .ThredMargin {
+        margin-bottom: 240px;
+      }
+      .carouselImg {
+        width: 200px;
+      }
 
+      /*Contact page */
+      .officePic {
+        width: 100%;
+      }
+      .pic {
+        width: 60%;
+      }
+      /* tags input */
+      .bootstrap-tagsinput .tag {
+        background: var(--primary);
+        padding: 4px;
+        font-size: 14px;
+        border-radius: 6px;
+      }
+      .containes {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* case stuyd */
+      .case-img {
+        width: 50%;
+      }
+      /* Industry */
+
+      #education {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAxgj-JX_oAl8iDHhNkKERQpCzyj0h1fZ-w&usqp=CAU');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #commerce {
+        background-image: url('https://lh4.googleusercontent.com/P72_YkJdhUfqnwFDB7op-Yb9VkPhy506XiVdCwDqgNnD7w2rMcIhR0KMuwcMYRCXweLMWdiFQvVBGuOkl6pIGb-dFmu9cwN8VUAhAKNLugahYbPQi0i_Jbhwec_LNb5FviewSZEo');
+      }
+      #travel {
+        background-image: url('https://www.smartdatacollective.com/wp-content/uploads/2019/11/shutterstock_784307425.jpg');
+      }
+      #health {
+        background-image: url('https://miro.medium.com/max/3200/1*afTS3knLUSHCJDirSOlq1g.jpeg');
+      }
+      #tech {
+        background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20180730194457-GettyImages-861122930.jpeg');
+      }
+      #finance {
+        background-image: url('https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/07/07134308/2018-07-09-WhatExpectEarnFinanceDegree-ThinkstockPhotos-494940062.jpg');
+      }
+      /* Time Line */
+      /* The actual timeline (the vertical ruler) */
+      .title {
+        font-family: 'Changa', sans-serif;
+      }
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: var(--primary);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      /* Container around content */
+      .contain {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      .fontColor {
+        color: #febe55;
+      }
+      /* The circles on the timeline */
+      .contain::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+
+        right: -13px;
+        background-color: white;
+        border: 4px solid blue;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+      .btn-link:hover {
+        color: #febe55;
+      }
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+      }
+      .footerImg {
+        width: 30px;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+        content: ' ';
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+
+        right: 30px;
+        border: medium solid black;
+        border-width: 10px 0 10px 10px;
+
+        border-color: transparent transparent transparent black;
+      }
+
+      /* Add arrows to the right container (pointing left) */
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -12px;
+      }
+
+      /* The actual content */
+      .content {
+        padding: 20px 30px;
+        background-color: white;
+        color: purple;
+        box-shadow: 0 0.5rem 1rem rgba(48, 122, 155, 0.1) !important;
+        position: relative;
+        border-radius: 6px;
+        border: 1px solid black;
+      }
+      .react-mobile-img-one {
+        width: 68%;
+      }
+      .web-pic {
+        width: 100%;
+        border: 10px solid black;
+        border-radius: 10px;
+      }
+      .react-mobile-image {
+        width: 100%;
+      }
+      .react-mobile-image-expert {
+        width: 44%;
+      }
+
+      .about-img {
+        border-radius: 34px;
+        width: 246px;
+      }
+      .about-image {
+        border-radius: 34px;
+        width: 220px;
+      }
+      .cycle-pic {
+        width: 77%;
+      }
+      .web1-pic {
+        width: 96%;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .pic-size {
+        width: 226px;
+        border-radius: 76px;
+      }
+      .picture-size {
+        width: 226px;
+        border-radius: 76px;
+      }
+      /*SEO Page */
+      .block-shadow:hover {
+        box-shadow: 0 0.5rem 2rem rgba(48, 122, 155, 0.1) !important;
+      }
+      .bg-blue:hover {
+        background-color: rgba(48, 122, 155, 0.1);
+      }
+      .seo-img {
+        width: 50px;
+      }
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+
+      /*Price Plan*/
+      * {
+        box-sizing: border-box;
+      }
+
+      .columns {
+        float: left;
+        width: 33.3%;
+        padding: 8px;
+      }
+
+      .price {
+        list-style-type: none;
+        border: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+      .class-margin {
+        margin-top: 1341px !important;
+      }
+      .price:hover {
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .price .headr {
+        background-color: #111;
+        color: white;
+        font-size: 25px;
+      }
+
+      .price li {
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .price .grey {
+        background-color: #eee;
+        font-size: 20px;
+      }
+      .btn-hover:hover {
+        background: var(--success) !important;
+        border: 1px solid var(--success);
+        color: white !important;
+      }
+      /*gallary */
+
+      .on-hover:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.1);
+        transition: all 300ms ease-in-out;
+      }
+      .zoom {
+        width: 100%;
+      }
+      .img-size {
+        object-fit: cover;
+        width: 100%;
+        height: 470px;
+      }
+      .link-card {
+        width: 100%;
+      }
+      .career-card:hover {
+        background: #fdfbf7;
+      }
+      .bg-white {
+        background-color: white;
+      }
+      .buttn {
+        background-color: #04aa6d;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .advantage-height {
+        height: 258px;
+      }
+      .box-hover:hover .awesome-hover {
+        color: #fff !important;
+      }
+      @media screen and (max-width: 376px) {
+        .box-hover .awesome-hover {
+          color: #fff !important;
+        }
+        .indus-sec {
+          display: none;
+        }
+        .mission-statement {
+          display: none;
+        }
+        .join-img {
+          display: none;
+        }
+        .columns {
+          float: left;
+          width: 100% !important;
+          padding: 8px;
+        }
+        .footerImg {
+          width: 24px !important;
+        }
+        .form-font {
+          font-size: 14px !important;
+        }
+        .box-hover {
+          background-color: #307a9b;
+          color: white !important;
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15) !important;
+        }
+        .timeline::after {
+          left: 31px;
+        }
+
+        /* Full-width arerrontainers */
+        .contain {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .contain::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+
+        /* Make sure all circles are at the same spot */
+        .left::after,
+        .right::after {
+          left: 15px;
+        }
+
+        /* Make all right contains behave like the left ones */
+        .right {
+          left: 0%;
+        }
+        .dropdown-item {
+          font-size: 15px;
+        }
+
+        #webApp {
+          background-image: url('https://clockwise.software/img/blog/how-much-does-it-cost-to-build-a-web-application/header-background.jpg');
+        }
+        #mobileApp {
+          background-image: url('https://inventionland.com/wp-content/uploads/2018/12/inventionland-flying-apps.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        #devOps {
+          background-image: url('https://www.einfochips.com/blog/wp-content/uploads/2017/02/DevOps-FAQ.jpg');
+        }
+        #teamExt {
+          background-image: url('https://www.mapconsulting.com/wp-content/uploads/2021/03/map-consulting-blog-213.jpg');
+        }
+        #Ui {
+          background-image: url('https://img.freepik.com/free-vector/realistic-ui-ux-background_23-2149046824.jpg?size=626&ext=jpg');
+        }
+        #seo {
+          background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/07/top-free-seo-tools-5f110b597b71e.png');
+        }
+        #ecommerce {
+          background-image: url('https://www.smarthint.co/wp-content/uploads/2019/03/futuro-do-ecommerce.jpg');
+        }
+        #qualityAssurance {
+          background-image: url('https://www.hurix.com/wp-content/uploads/2021/06/Quality-control-vs-quality-assurance-1200x565.jpg');
+        }
+        #threeD {
+          background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20190820185239-GettyImages-985550942.jpeg?auto=webp&quality=95&crop=16:9&width=675');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        #blockchain {
+          background-image: url('https://www.codemotion.com/magazine/wp-content/uploads/2020/02/blockchain-3019120_1280-896x504.png');
+        }
+        .font {
+          font-size: 14px !important;
+        }
+        /* Place the timelime to the left */
+        .study1:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: -1;
+        }
+        .advantage-height {
+          height: 307px;
+        }
+        .transparent-dark {
+          background: rgba(0, 0, 0, 0.7);
+          height: 100%;
+        }
+
+        .main {
+          background-image: url('https://techgadgetcentral.com/wp-content/uploads/2021/02/Software-Development.jpg');
+          background-size: 100% 100%;
+          width: 100%;
+          position: relative;
+          z-index: 1;
+        }
+        .img-size {
+          object-fit: contain;
+          width: 100%;
+          background-size: 100% 100%;
+          height: 250px;
+        }
+        .typed-text {
+          position: absolute;
+          top: 45px;
+          font-size: 15px;
+          left: -145px;
+        }
+        .cycle-pic {
+          display: none;
+        }
+        .transparent-dark-two {
+          background: rgba(0, 0, 0, 0.6);
+          height: 100%;
+        }
+        .solution-box-img-t {
+          width: 29%;
+        }
+        .solution-box-img {
+          width: 35%;
+        }
+        h1 {
+          font-size: 27px;
+        }
+        h2 {
+          font-size: 23px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+
+        h5 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 14px;
+        }
+        .block-img {
+          display: none;
+        }
+        .react-mobile-img {
+          display: none;
+        }
+        .block-shadow {
+          border: 1px solid lightgrey;
+        }
+        .disp-image {
+          display: none;
+        }
+        .carouselImg {
+          width: 108px;
+        }
+        .fixPic {
+          display: none;
+        }
+
+        .tech-block {
+          border: 1px solid lightgrey;
+        }
+      }
     </style>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -417,6 +1710,147 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyA-5k0uiC95LLs37cGY0zQzfMth449BWf8",
+        authDomain: "leadsolution-a928c.firebaseapp.com",
+        projectId: "leadsolution-a928c",
+        storageBucket: "leadsolution-a928c.appspot.com",
+        messagingSenderId: "557297899638",
+        appId: "1:557297899638:web:03f5ca332c868c822be757",
+        measurementId: "G-YK6YG61BLT"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
 
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slitslider.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var Page = (function () {
+          var $navArrows = $('#nav-arrows'),
+            $nav = $('#nav-dots > span'),
+            slitslider = $('#slider').slitslider({
+              onBeforeChange: function (slide, pos) {
+                $nav.removeClass('nav-dot-current')
+                $nav.eq(pos).addClass('nav-dot-current')
+              },
+            }),
+            init = function () {
+              initEvents()
+            },
+            initEvents = function () {
+              // add navigation events
+              $navArrows.children(':last').on('click', function () {
+                slitslider.next()
+                return false
+              })
+
+              $navArrows.children(':first').on('click', function () {
+                slitslider.previous()
+                return false
+              })
+
+              $nav.each(function (i) {
+                $(this).on('click', function (event) {
+                  var $dot = $(this)
+
+                  if (!slitslider.isActive()) {
+                    $nav.removeClass('nav-dot-current')
+                    $dot.addClass('nav-dot-current')
+                  }
+
+                  slitslider.jump(i + 1)
+                  return false
+                })
+              })
+            }
+
+          return { init: init }
+        })()
+
+        Page.init()
+
+        /**
+         * Notes:
+         *
+         * example how to add items:
+         */
+
+        /*
+				
+				var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+				
+				// call the plugin's add method
+				ss.add($items);
+
+				*/
+      })
+    </script>
   </body>
+  <script type="text/javascript">
+    var mybutton = document.getElementById('myBtn')
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    }
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = 'block'
+      } else {
+        mybutton.style.display = 'none'
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+    }
+    $(function () {
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 10) {
+          $('.navbar').addClass('active')
+          $('.nav-link').removeClass('text-dark')
+          $('.nav-link').addClass('font-weight-bold')
+          $('.nav-link').addClass('text-primary')
+          $('.nav').addClass('bg-white')
+        } else {
+          $('.navbar').removeClass('active')
+          $('.nav-link').addClass('text-primary')
+          $('.nav-link').addClass('text-dark')
+
+          $('.nav-link').removeClass('font-weight-bold')
+        }
+      })
+    })
+
+    $(document).ready(function () {
+      var tagInputEle = $('#tags-input')
+      tagInputEle.tagsinput()
+      tagInputEle.tagsinput('add', 'JavaScript')
+      tagInputEle.tagsinput('add', 'Boottsrap')
+      tagInputEle.tagsinput('add', 'React.js')
+    })
+  </script>
 </html>

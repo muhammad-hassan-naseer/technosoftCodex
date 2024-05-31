@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Typed from "react-typed";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Typed from 'react-typed'
 
 const PostHeader = () => {
   return (
@@ -10,9 +11,9 @@ const PostHeader = () => {
           autoPlay
           loop
           muted
-          style={{ opacity: 1, width: "100%", height: "auto" }}
+          style={{ opacity: 1, width: '100%', height: 'auto' }}
         >
-          <source src={process.env.PUBLIC_URL + "/video.mp4"} />
+          <source src={process.env.PUBLIC_URL + '/video.mp4'} />
           <source
             src="/wp-content/uploads/2019/10/arbisoft-video.webm"
             type="video/webm"
@@ -22,9 +23,9 @@ const PostHeader = () => {
           <h1 id="build">
             <Typed
               className="typed-text"
-              strings={["We build powerful digital solutions and experiences."]}
+              strings={['We build powerful digital solutions and experiences.']}
               typeSpeed={40}
-              backSpeed={60}
+              backSpeed={20}
               loop
             />
           </h1>
@@ -40,16 +41,16 @@ const PostHeader = () => {
             <div className="col">
               <button
                 type="button"
-                className="btn p-3 btn-primary  btn-sm btn-md-lg"
+                className="btn p-3 btn-success  btn-sm btn-md-lg"
               >
-                Tell us about yourproject
+                <Link to="/contact">Tell us about yourproject</Link>
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PostHeader;
+export default PostHeader

@@ -10,25 +10,25 @@ const Info = (props) => {
       </h6>
       <div className="row mt-5">
         <div className="col-sm-8">
-          <h4 className="text-primary">
+          <h3>
             {props.info.leader}
-          </h4>
+          </h3>
           <p className="text-justify">
             {props.info.para}
           </p>
         </div>
-        <div className="col-sm-4 text-center">
+        <div className="col-sm-4 text-center m-auto">
        {props.info.faFirst}
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-sm-4 text-center">
+        <div className="col-sm-4 text-center m-auto">
         {props.info.faSecond}
         </div>
         <div className="col-sm-8">
-          <h4 className='text-primary'>
+          <h3>
             {props.info.softwareServiceHead}
-          </h4>
+          </h3>
           <p className="text-justify">
            {props.info.softwareServicePara}
           </p>

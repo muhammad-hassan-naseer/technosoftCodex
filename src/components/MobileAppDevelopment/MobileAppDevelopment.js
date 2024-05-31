@@ -1,93 +1,176 @@
-import React, { Component } from 'react';
-import Header from '../Header';
-import PostHeader from './PostHeader';
-import Card from '../LandingPage/Card';
-import Strategy from '../LandingPage/Strategy';
-import Footer from '../LandingPage/Footer';
+import React, { useEffect } from 'react'
+import Header from '../Header'
+import PostHeader from '../MobileAppDevelopment/PostHeader'
+import Card from '../LandingPage/Card'
+import Footer from '../LandingPage/Footer'
+import BoldArea from '../BlockChain/BoldArea'
+import MobilePackage from './MobilePackage'
+import FerrisWheel from './FerrisWheel'
+import TopHead from '../BlockChain/TopHead'
+import AdCard from '../LandingPage/AdCard'
+import TimeLine from '../TimeLine/TimeLine.js'
 
+const Mobile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
+  const timeLineData = {
+    firstbox: {
+      headOne: 'Step 1',
+      headTwo: 'Discovery Phase Workshop',
+      para:
+        'An amazing brainstorming workshop for better approaches and steps.',
+    },
+    secondBox: {
+      headOne: 'Step.2',
+      headTwo: 'print 0:Project Initiation',
+      para: 'Going to strat the project with a huge passiona and beleive.',
+    },
+    thirdBox: {
+      headOne: 'Step.3',
+      headTwo: 'Interactive Development:UI/UX design, Development, QA',
+      para:
+        'Our Expert UI/UX design team making your app eperience best one in te world.  ',
+    },
+    fourthBox: {
+      headOne: 'Step.4',
+      headTwo: 'User Acceptance Testing',
+      para: 'Testing the app in the shoe of a customer.',
+    },
+    fifthBox: {
+      headOne: 'Step.5',
+      headTwo: 'MVP/Soft Launch',
+      para: 'A soft launch for desirable changes.',
+    },
+    sixthBox: {
+      headOne: 'Step.6',
+      headTwo: 'App Launch',
+      para: 'Technosoft going to launch An incredible app for you',
+    },
+  }
 
+  const tech = [
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fab fa-creative-commons"></i>
+      ),
+      head: 'Native Mobile App Development',
+      para:
+        'Our mobile app developers can build high-quality native apps for both Android and iOS systems aligned with your business and security requirements. ',
+    },
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fab fa-phabricator"></i>
+      ),
+      head: 'Hybrid Mobile App Development',
+      para:
+        'Cross-platform apps that can work in different environments thanks to a unique blend of native and web app technologies.',
+    },
+    {
+      font: <i class="fa-3x text-dark-orange text-orange fas fa-spinner"></i>,
+      head: 'Progressive',
+      para:
+        'With Progressive Web Apps, we deliver native-like capabilities and installability while reaching anyone, anywhere, on any device with a single codebase. ',
+    },
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fas fa-genderless"></i>
+      ),
+      head: 'Wearables  Software',
+      para:
+        'We can create companion apps for a number of wearable devices, integrate with smart devices or proprietary peripherals.',
+    },
+  ]
+  var techArray = tech.map((section) => {
+    return <Card image={section.font} head={section.head} para={section.para} />
+  })
 
-
-const WebAppDevelopment = () => {
-    const tech = [
-        {
-          head: "Specialist iOS Developers",
-          para: "Multi-disciplined iOS development teams supporting all your technical requirements under one roof..",
-          img: <i class="fab fa-apple-pay fa-2x text-primary  text-center" />,
-          sign: "",
-        },
-        {
-          head: "Android App Development",
-          para: "We help keep your apps updated and their features updated. We can wrangle the messiest legacy code, bring it in line with standards, and keep it functional, fast, and secure.",
-          img: <i class="fab fa-android  fa-2x text-primary  text-center" />,
-          sign: "",
-        },
-        {
-          head: "Extensions & Maintenance",
-          para: "We’ve collaborated on 2D and 3D Android apps, mobile games and more that work with your native operating system capabilities and deliver delightful experiences.",
-          img: <i class="fas fa-mountain fa-2x text-primary  text-center" />,
-          sign: "",
-        },
-      ];
-      var techArray = tech.map((section) => {
-        return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
-      });
-      const strategy = {
-        head: "CASE STUDIES",
-        para: "We work on cutting-edge technology and enterprise solutions for solving real-world problems and help businesses become bigger & better.",
-        img:<img src="https://arbisoft.com/wp-content/uploads/2019/10/case-study.png" alt="Web App" className="text-left" style={{width:"100%"}}/>,
-        sign: <button type="button" class="btn btn-primary">View our work</button>    
-      };
-      const advantages = [
-        {
-          head: "Full-service Web Development",
-          para: "From bespoke development to performance optimization, cloud-based deployment, API development and integration, continuous quality assurance, and round-the-clock SaaS support, we have a track record of delivering award-winning applications that make life easier for businesses and consumers alike without compromising on quality standards.",
-          img: "",
-          sign: "",
-        },
-        {
-          head: "Partnerships to Grow With",
-          para: "We’re the serial monogamists of our industry: we’re interested in nurturing long-term relationships with our clients. That’s why all our web app development projects get dedicated developer teams that continue to work on the product throughout its lifetime, gaining deeper insight into your business goals and how we can build you software that helps you achieve them.",
-          img: "",
-          sign: "",
-        },
-        {
-          head: "Scalable, Secure Software",
-          para: "Our web applications are designed to scale with your organization’s needs. That’s why we design tech stacks suited to a rapidly changing digital ecosystem and combine them with development best practices as well as an Agile Scrum methodology so we can keep improving your web app even after launch.",
-          img: "",
-          sign: "",
-        },
-      ];
-      var advantagesArray = advantages.map((section) => {
-        return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
-      });
-      const postHeader={
-        service:"Services",
-        tagLine:"Mobile App Development",
-        para:"US consumers spend nearly a quarter of their day on their mobile phone – and 92% of that time is spent using apps. Your app needs to be brilliantly designed and intuitive to have a shot at getting anyone’s attention..",
-        btn:<button type="button" class="btn btn-primary">Tell us about your project</button>,
-        id:"mobileApp"    
-      }
+  const advantages = [
+    {
+      head: ' Simplicity',
+      para:
+        'Technosoft provides clear, uncluttered screens lead to the next step of the app process and there is no ambiguity that enhances customer experience and will encourage them to continue using it.',
+      img: '',
+      sign: '',
+    },
+    {
+      head: 'Flexibility',
+      para:
+        'we are flexible.There are three main mobile operating systems - iOS, Android, and Windows - and to get the most out of your operating system, it needs to be available in all of these.',
+      img: '',
+      sign: '',
+    },
+    {
+      head: 'Security',
+      para:
+        'Internet security becomes a growing problem and the same applies to your app. With many applications that store personal and sensitive information or credit and debit card information, security is absolutely necessary Technosoft provides you with the best possible secure apps.',
+      img: '',
+      sign: '',
+    },
+  ]
+  var advantagesArray = advantages.map((section) => {
     return (
-        <div>
-            <Header />
-            <PostHeader postHeader={postHeader}/>
-            <div className="">
-                <div className="container">
-                <h2 className="text-center text-white text-primary mt-5">Put your company in your customer’s pocket
-</h2>
-                <div className="row mt-5">{techArray}</div>
-                <Strategy obj={strategy} />
-                <h2 className="text-center text-white text-primary mt-5">The Technosoft Advantage.</h2>
-<p className="text-center text-white text-primary">We produce well-designed, engaging, and secure custom web apps.</p>
-<div className="row">{advantagesArray}</div>
-
-                </div>
-<Footer />
-            </div>
-        </div>
+      <AdCard
+        image={section.img}
+        head={section.head}
+        para={section.para}
+        sign={section.sign}
+      />
     )
+  })
+  const postHeader = {
+    service: 'Tech Service',
+
+    tagLine: 'Mobile App Solutions',
+    para:
+      'We help global brands design and build superior digital products, enabling seamless user experiences across all modern platforms and devices.',
+    btn: (
+      <button type="button" class="btn btn-success">
+        Let's Discuss Your Project{' '}
+      </button>
+    ),
+    id: 'mobileApp',
+  }
+  const boldData = {
+    head: 'READY TO MAKE YOUR DREAM  MOBILE APP?',
+    pic: '/mob.png',
+  }
+  const topData = {
+    head: 'DELIVERING STELLAR MOBILE APP DEVELOPMENT SERVICE',
+    p:
+      'We help global brands design and build superior digital products, enabling seamless user experiences across all modern platforms and devices. ',
+  }
+  return (
+    <div>
+      <Header />
+      <PostHeader postHeader={postHeader} />
+      <div className="">
+        <TopHead topData={topData} />
+        <div className="container">
+          <div className="row mt-5">{techArray}</div>
+          <br />
+        </div>
+        <TimeLine timeLineData={timeLineData} />
+        <div className="container"></div>
+
+        <BoldArea boldData={boldData} />
+        <div className="container">
+          <h3 className="mt-5 text-primary text-center text-underline">
+            Our Emerging Tech
+          </h3>
+
+          <FerrisWheel />
+          <MobilePackage />
+          <h3 className="text-center text-underline text-primary">
+          LeadSolution Edge
+          </h3>
+          <div className="row">{advantagesArray}</div>
+        </div>
+        <Footer />
+      </div>
+    </div>
+  )
 }
 
-export default WebAppDevelopment
+export default Mobile

@@ -1,25 +1,25 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 const CardCol = (props) => {
   return (
     <>
-      <div className="card  p-3">
+      <div className="tech-block p-3 rounded  ">
         {props.image}
-        <div className="card-body">
-          <h4 className="card-title text-primary">{props.head}</h4>
-          <p className="card-text text-justify">{props.para}</p>
-          <p className="card-text">
+        <div>
+          <h4 className="heading">{props.head}</h4>
+          <p className="text-left para">{props.para}</p>
+          <p>
             <a
-              style={{ color: "#5497da" }}
+              style={{ color: '#5497da' }}
               href="/services/web-app-development/"
             >
-             {props.sign}
+              {props.sign}
             </a>
           </p>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CardCol;
+export default CardCol

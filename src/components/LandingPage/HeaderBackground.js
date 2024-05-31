@@ -1,23 +1,26 @@
-import React, { Component } from "react";
-import Typed from "react-typed";
-import Particles from "react-particles-js";
+import React, { Component } from 'react'
+import Typed from 'react-typed'
+import Particles from 'react-particles-js'
 
 const HeaderBackground = () => {
   return (
     <>
-      <div className="study1">
-        <div className="transparent-dark"></div>
+      <div className="main">
+        <div className="transparent-dark-two"></div>
+        <h2 className="text-white type mr-5 pr-5">
+          {' '}
+          <Typed
+            className="typed-text text-center"
+            strings={[
+              'BEST SOFTWARE SOLUTION SOLVING LEAST PROBLEM IS NOTHING!',
+              'WE ARE GIVING DATA MANY AND MORE IMPORTANCE THAN SOFTWARE!',
+            ]}
+            typeSpeed={80}
+            backSpeed={100}
+            loop
+          />
+        </h2>
       </div>
-      <h2 className="text-white type">
-        {" "}
-        <Typed
-          className="typed-text"
-          strings={["We build powerful digital solutions and experiences."]}
-          typeSpeed={40}
-          backSpeed={60}
-          loop
-        />
-      </h2>
       <Particles
         params={{
           particles: {
@@ -32,7 +35,7 @@ const HeaderBackground = () => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
-export default HeaderBackground;
+export default HeaderBackground

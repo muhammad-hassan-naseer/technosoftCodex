@@ -1,94 +1,148 @@
-import React, { Component } from 'react';
-import Header from '../Header';
-import PostHeader from '../MobileAppDevelopment/PostHeader';
-import Card from '../LandingPage/Card';
-import Strategy from '../LandingPage/Strategy';
-import Footer from '../LandingPage/Footer';
-
-
-
-
+import React, { useEffect } from 'react'
+import Header from '../Header'
+import PostHeader from '../MobileAppDevelopment/PostHeader'
+import Card from '../LandingPage/Card'
+import Strategy from '../LandingPage/Strategy'
+import Footer from '../LandingPage/Footer'
+import UIImportance from './UIImportance'
+import BoldArea from '../BlockChain/BoldArea'
+import UIpackage from './UIpackage'
+import FerrisWheel from './FerrisWheel'
+import TopHead from '../BlockChain/TopHead'
+import AdCard from '../LandingPage/AdCard'
 
 const UI = () => {
-    const tech = [
-        {
-          head: "User Research",
-          para: "For clients in the design and prospecting phase of a new product, we offer in-depth user research, mockups, user persona development, and thorough UI/UX testing to ensure your app is human-friendly from the start.",
-          img: <i class="fab fa-researchgate fa-2x text-primary text-center" />,
-          sign: "",
-        },
-        {
-          head: "UX Audit",
-          para: "We offer UX auditing services for products that are already in the hands of users so you can see what’s working and what isn’t.",
-          img: <i class="fas fa-audio-description fa-2x text-primary text-center" />,
-          sign: "",
-        },
-        {
-          head: "Interaction Design",
-          para: "We combine the five dimensions of interaction design—words, visuals, spatial layouts, time, and object behavior—into one smooth experience to help you create the best possible user experience.",
-          img: <i class="fas fa-ruler-vertical fa-2x text-primary text-center" />,
-          
-          sign: "",
-        },
-      ];
-      var techArray = tech.map((section) => {
-        return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
-      });
-      const strategy = {
-        head: "CASE STUDIES",
-        para: "We work on cutting-edge technology and enterprise solutions for solving real-world problems and help businesses become bigger & better.",
-        img:<img src="https://arbisoft.com/wp-content/uploads/2019/10/case-study.png" alt="Web App" className="text-left" style={{width:"100%"}}/>,
-        sign: <button type="button" class="btn btn-primary">View our work</button>    
-      };
-      const advantages = [
-        {
-          head: "Thoughtful Design",
-          para: "Crafting the perfect user experience is nothing short of alchemy. Our team melds user needs, functionality, and aesthetics to create experiences that captivate your customers",
-          img: "",
-          sign: "",
-        },
-        {
-          head: "Detailed Focus",
-          para: "Page flow, visual layout, and the psychological impact of copy all influence your customers’ experience. Our team focuses on each detail to craft the ideal user experience..",
-          img: "",
-          sign: "",
-        },
-        {
-          head: "Expert Guidance",
-          para: "Our team specializes in understanding your user and creating an experience just for them. From initial designs to audits of existing apps, our team will make sure your app engages your audience and makes them want to stick around.",
-          img: "",
-          sign: "",
-        },
-      ];
-      var advantagesArray = advantages.map((section) => {
-        return <Card image={section.img} head={section.head} para={section.para} sign={section.sign}/>;
-      });
-      const postHeader={
-        service:"Services",
-        tagLine:"UI-UX Solutions",
-        para:"Good user experiences are very important to us for every software we create.By basing our software on human-centered design principles, we ensure your users get the best experience, and you get the best return on investment.",
-        btn:<button type="button" class="btn btn-primary">Tell us about your project</button>,
-        id:"Ui"    
-      }
-    return (
-        <div>
-            <Header />
-            <PostHeader postHeader={postHeader}/>
-            <div className="">
-                <div className="container">
-                <h2 className="text-center text-white text-primary mt-5">We create apps your users will love.
-</h2>
-                <div className="row mt-5">{techArray}</div>
-                <Strategy obj={strategy} />
-                <h2 className="text-center text-white text-primary mt-5">The Technosoft Advantage.</h2>
-<p className="text-center text-white text-primary">We produce well-designed, engaging, and secure custom web apps.</p>
-<div className="row">{advantagesArray}</div>
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
-                </div>
-<Footer />
-            </div>
-        </div>
+  const tech = [
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fas fa-pencil-ruler"></i>
+      ),
+      head: 'Website Design',
+      para:
+        "The company's website is the face of the world. It is also a preferred method of doing business around the world and should therefore reflect the type of company that represents and serves its intended audience. Combined with usability and accessibility, design can be a very important part of a web project. The attractive appearance and feel of the right tone will significantly improve site audience engagement and adherence. Your products will be seen more accurately and returns will increase. ",
+    },
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fas fa-photo-video"></i>
+      ),
+      head: 'Multimedia Solutions',
+      para:
+        'We build powerful multimedia capabilities to enhance web interactions, product demonstrations and corporate presentations. Collaborative presentations help increase the focus of your audience, and ensure that the focus is not lost! The use of multimedia enhancement on Adobe Flash, HTML5 or Silverlight on a website, if used properly, can significantly increase the impact on your viewers and help elevate your site above your competitors.',
+    },
+    {
+      font: (
+        <i class="fa-3x text-dark-orange text-orange fas fa-exclamation-circle"></i>
+      ),
+      head: 'Animation',
+      para:
+        'For the past ten years Flash has proven to be one of the most fashionable and popular web design technologies. It allows developers and customers to enjoy complete creative freedom, creates a positive impact on visitors and enhances your message. Nowadays technologies like HTML5 and Javascript can be used to develop more compelling animation and animation. If you have a product or company that you want to show off for a presentation that is an effective way to complete it.',
+    },
+    {
+      font: <i class="fa-3x text-dark-orange text-orange fas fa-x-ray"></i>,
+      head: 'Banner Design',
+      para:
+        'Our roster includes seasoned experts of leading web programming languages who work directly with you to ensure all your preferences remain priority. Maintaining the highest technical standards, our workforce implements internationally accredited procedures to create a functionally superior website that drives, engages, and converts.',
+    },
+    {
+      font: <i class="fa-3x text-dark-orange text-orange fas fa-newspaper"></i>,
+      head: 'E-Newsletter Design',
+      para:
+        'We are designing e-newsletters that can carry your message to your target audience efficiently. Improving your corporate identity, clarify your message and attracting the recipients to the core of the business.',
+    },
+  ]
+  var techArray = tech.map((section) => {
+    return <Card image={section.font} head={section.head} para={section.para} />
+  })
+
+  const advantages = [
+    {
+      head: 'Know Your Users',
+      para:
+        "Technosoft doesn't stop knowing what your users want. Dig deeper and find out what they need. After all, desires are just the tip of the iceberg. If you are able to meet the deepest needs of the user, you will meet their needs while meeting the most important needs.",
+      img: '',
+      sign: '',
+    },
+    {
+      head: 'How people Using interface',
+      para:
+        'Technosoft before designing your interface finds out what you need to define and how people will use it. With the growing popularity of touch-based devices, it is a much more important concern than you might think.',
+      img: '',
+      sign: '',
+    },
+    {
+      head: 'Give feedback—fast',
+      para:
+        'Technosoft UI experts beleive on giving fast feedback eg.An awesome loading spinner.Make a button appear and turn it back when I tap it — but not too much. And you give me a virtual high-five if I do something you and I agree that is great.',
+      img: '',
+      sign: '',
+    },
+  ]
+  var advantagesArray = advantages.map((section) => {
+    return (
+      <AdCard
+        image={section.img}
+        head={section.head}
+        para={section.para}
+        sign={section.sign}
+      />
     )
+  })
+  const postHeader = {
+    service: 'Tech Service',
+
+    tagLine: 'UI-UX Solutions',
+    para:
+      'Good user experiences are very important to us for every software we create.By basing our software on human-centered design principles, we ensure your users get the best experience, and you get the best return on investment.',
+    btn: (
+      <button type="button" class="btn btn-success">
+        Let's Discuss Your Project{' '}
+      </button>
+    ),
+    id: 'Ui',
+  }
+  const boldData = {
+    head: "Let's design something user's love that!",
+    pic: '/uui.png',
+  }
+  const topData = {
+    head:
+      'Technosoft holds top UI/UX Specialists to Implement Incredible designs',
+    p:
+      "Finalizing the visual design can affect the users' behavior and hence it is the most important component of the UI design. ",
+  }
+  return (
+    <div>
+      <Header />
+      <PostHeader postHeader={postHeader} />
+      <div className="">
+        <TopHead topData={topData} />
+        <div className="container">
+          <div className="row mt-5">{techArray}</div>
+          <UIImportance />
+        </div>
+
+        <BoldArea boldData={boldData} />
+        <div className="container">
+          <h3 className="mt-5 text-primary text-center">
+            Aspects of the UI/UX we try to deliver
+          </h3>
+
+          <FerrisWheel />
+
+          <UIpackage />
+          <h3 className="text-center text-primary text-underline">
+          LeadSolution Edge
+          </h3>
+          <div className="row">{advantagesArray}</div>
+        </div>
+        <Footer />
+      </div>
+    </div>
+  )
 }
 
 export default UI

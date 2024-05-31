@@ -3,8 +3,8 @@ import React from "react";
 const HeaderBackground = (props) => {
   return (
     <header>
-      <div className="p-5 text-start bg-image indus" style={{}}>
-        <p className="text-white mt-5 h5">INDUSTRY</p>
+      <div className="p-5 text-start bg-image indus " style={{}}>
+        <p className="text-white mt-5 h5 postHead-margin font-weight-bold transparent-dark">INDUSTRY</p>
         <div className="d-flex justify-content-start align-items-start h-100">
           <div className="row">
             <div className="col-sm-12 text-fluid">

@@ -2,14 +2,14 @@ import React, { Component } from "react";
 
 const DiscussionForm = () => {
   return (
-    <div>
+    <div className='mt-5'>
       <form>
         <div className="form-row">
           <div className="form-group col-md-6">
             <div className="input-group input-group-lg">
               <input
                 type="text"
-                className="form-control"
+                className="form-control form-font"
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
                 placeholder="Enter Your Name"
@@ -20,7 +20,7 @@ const DiscussionForm = () => {
             <div className="input-group input-group-lg">
               <input
                 type="text"
-                className="form-control"
+                className="form-control form-font"
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
                 placeholder="Enter Your Email"
@@ -36,29 +36,21 @@ const DiscussionForm = () => {
                 id="field[11]"
                 required
                 data-name="which_services_are_you_interested_in"
-                className="form-control"
+                className="form-control form-font"
               >
                 <option selected>Which Service Are You Interested In?</option>
-                <option value="Enterprise Software Solutions">
-                  Enterprise Software Solutions
-                </option>
+
                 <option value="Dedicated Development Team">
-                  Dedicated Development Team
+                  BlockChain Development
                 </option>
                 <option value="Mobile App Development">
                   Mobile App Development
                 </option>
                 <option value="Web App Development">Web App Development</option>
-                <option value="Data Services">Data Services</option>
-                <option value="Open edX Services">Open edX Services</option>
+
                 <option value="UI/UX">UI/UX</option>
-                <option value="DevOps">DevOps</option>
-                <option value="3D App Development">3D App Development</option>
                 <option value="Quality Assurance">Quality Assurance</option>
-                <option value="Partnership Opportunities">
-                  Partnership Opportunities
-                </option>
-                <option value="RFQ/RFP">RFQ/RFP</option>
+                <option value="Quality Assurance">Digital Marketing</option>
               </select>
             </div>
           </div>
@@ -69,29 +61,19 @@ const DiscussionForm = () => {
                 id="field[11]"
                 required
                 data-name="which_services_are_you_interested_in"
-                className="form-control"
+                className="form-control form-font"
               >
-                <option selected>Which Service Are You Interested In?</option>
+                <option selected>Your Estimated Budget?*?</option>
                 <option value="Enterprise Software Solutions">
-                  Enterprise Software Solutions
+                  $50,000 - $100,000
                 </option>
                 <option value="Dedicated Development Team">
-                  Dedicated Development Team
+                  $100,000 - $200,000
                 </option>
                 <option value="Mobile App Development">
-                  Mobile App Development
+                  $200,000 - $500,000
                 </option>
-                <option value="Web App Development">Web App Development</option>
-                <option value="Data Services">Data Services</option>
-                <option value="Open edX Services">Open edX Services</option>
-                <option value="UI/UX">UI/UX</option>
-                <option value="DevOps">DevOps</option>
-                <option value="3D App Development">3D App Development</option>
-                <option value="Quality Assurance">Quality Assurance</option>
-                <option value="Partnership Opportunities">
-                  Partnership Opportunities
-                </option>
-                <option value="RFQ/RFP">RFQ/RFP</option>
+                <option value="Web App Development">$500,000 or above</option>
               </select>
             </div>
           </div>
@@ -101,7 +83,7 @@ const DiscussionForm = () => {
             <div className="input-group input-group-lg">
               <input
                 type="text"
-                className="form-control"
+                className="form-control form-font"
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
                 placeholder="Enter Your Phone"
@@ -112,7 +94,7 @@ const DiscussionForm = () => {
             <div className="input-group input-group-lg">
               <input
                 type="text"
-                className="form-control"
+                className="form-control form-font"
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
                 placeholder="Enter Your Organization"
@@ -128,12 +110,12 @@ const DiscussionForm = () => {
             required
             data-name="message"
             spellCheck="false"
-            className="form-control"
+            className="form-control form-font"
             defaultValue={""}
           />
         </div>
         <div className="row mt-3">
-          <div className="col">
+          <div className="col-md-6">
             {" "}
             <div className="form-group">
               <div className="form-check">
@@ -148,11 +130,11 @@ const DiscussionForm = () => {
               </div>
             </div>
           </div>
-          <div className="col text-right">
+          <div className="col-md-6 text-left text-md-right">
             {" "}
             <button
               type="submit"
-              className="btn btn-primary p-3 btn-sm btn-md-lg"
+              className="btn btn-primary p-2 p-md-3 btn-sm btn-md-lg"
             >
               LET'S Discuss
             </button>
